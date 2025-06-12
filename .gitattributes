@@ -1,4 +1,4 @@
-*.md linguist-language=matlab 
+*.m linguist-language=matlab 
 *.yml linguist-language=matlab 
 *.html linguist-language=matlab 
 *.js linguist-language=matlab 
