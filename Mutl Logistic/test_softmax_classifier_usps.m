@@ -7,7 +7,7 @@ function test_softmax_classifier_usps()
         rng(z(i))
         epoch_base = 1;
         [y_in,x_in] = libsvmread('data/usps');
-        [yt_in,xt_in] = libsvmread('data/usps.t');
+        [yt_in,xt_in] = libsvmread('data/usps_test');
         x_in = full(x_in)';
         y_in = y_in';
         xt_in = full(xt_in)';
