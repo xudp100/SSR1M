@@ -16,6 +16,7 @@ This project implements multi-class classification experiments using  the multi-
 ### Dependencies
 
 MATLAB R2016b or above
+
 LIBSVM package (for data loading)
 
 ### Running Experiments
