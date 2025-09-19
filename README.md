@@ -20,19 +20,19 @@ This project implements multi-class classification experiments using  the multi-
 	|   +-- main_cifar10.py
 
 ## How to Use
+```bash
 +-- Mutl Logistic:
 |   +-- MATLAB R2016b or above
 |   +-- LIBSVM package (for data loading)
-
-
+```
+```bash
 +-- classification_cifar:
 |   +--  Python 3.9+ and PyTorch:
 |   +--  torch, numpy
 This will install the following dependencies:
-
 * [torch](https://pytorch.org/) (the library was tested on version  2.5.1+cu121)
 * [numpy](https://numpy.org/) (the library was tested on version  1.23.5)
-
+```
 
 ## Running Experiments
 Basic Training
