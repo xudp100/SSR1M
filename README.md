@@ -11,6 +11,12 @@ This project implements multi-class classification experiments using  the multi-
 	|   +-- SSR1M.m
 	|   +-- stepsize_alg.m
 	|   +-- store_infos.m
+	+-- classification_cifar/                
+	|   +-- Model
+ 			+--Resnet.py
+	|   +-- Optimizer
+  			+--SSR1M.py
+	|   +-- main_cifar10.py
 
 ## How to Use
 ### Dependencies
