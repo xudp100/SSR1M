@@ -3,6 +3,7 @@
 This project implements multi-class classification experiments using  the multi-class Logistic loss with a non-convex regularization term. The code is partially derived and adapted from https://github.com/hiroyuki-kasai/SGDLibrary. We would like to sincerely thank the developers of SGDLibrary for their excellent work.
 
 ## Project Structure
+```bash
 	+-- Mutl Logistic/                
 	|   +-- test_softmax_classifier_usps.m
 	|   +-- custom_softmax_regression.m
@@ -11,13 +12,15 @@ This project implements multi-class classification experiments using  the multi-
 	|   +-- SSR1M.m
 	|   +-- stepsize_alg.m
 	|   +-- store_infos.m
- 
+ ```
+ ```bash
 	+-- classification_cifar/                
 	|   +-- Model
  			+--Resnet.py
 	|   +-- Optimizer
   			+--SSR1M.py
 	|   +-- main_cifar10.py
+```
 
 ## How to Use
 ```bash
