@@ -21,13 +21,13 @@ This project implements multi-class classification experiments using  the multi-
 
 ## How to Use
 ### Dependencies
-Mutl Logistic:
+Mutl Logistic:/
 |   +-- MATLAB R2016b or above
 |   +-- LIBSVM package (for data loading)
 
 
-classification_cifar:
-|   +--  Python 3.8+ and PyTorch:
+classification_cifar:/
+|   +--  Python 3.9+ and PyTorch:
 |   +--  torch, numpy
 This will install the following dependencies:
 * [torch](https://pytorch.org/) (the library was tested on version  2.5.1+cu121)
@@ -38,7 +38,9 @@ This will install the following dependencies:
 Basic Training
 
 ### Running Experiments
+```bash
 To run the classifier: test_softmax_classifier_usps.m
+```
 
 ```bash
 python classification_cifar100/main.py --optimizer AdaVAM
