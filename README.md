@@ -46,5 +46,5 @@ To run the classifier: test_softmax_classifier_usps.m
 ```
 
 ```bash
-python classification_cifar100/main.py --optimizer AdaVAM
+python classification_cifar/main_cifar10.py --optimizer AdaVAM
 ```
