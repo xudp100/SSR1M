@@ -21,12 +21,12 @@ This project implements multi-class classification experiments using  the multi-
 
 ## How to Use
 ### Dependencies
-Mutl Logistic:/
++-- Mutl Logistic:
 |   +-- MATLAB R2016b or above
 |   +-- LIBSVM package (for data loading)
 
 
-classification_cifar:/
++-- classification_cifar:
 |   +--  Python 3.9+ and PyTorch:
 |   +--  torch, numpy
 This will install the following dependencies:
