@@ -8,6 +8,7 @@ import os
 import numpy as np
 import argparse
 from Model.Resnet import ResNet18
+from Model.vgg import VGG
 from Optimizer.SSR1M import SSR1M
 
 
@@ -79,6 +80,8 @@ def build_dataset():
 def select_model(model_name, num_classes=10):
     if model_name == 'ResNet18':
         return ResNet18(num_classes)
+    elif model_name == 'VGG13':
+        return VGG('VGG13', num_classes)
     else:
         raise ValueError(f"false: {model_name}")
 
@@ -136,7 +139,7 @@ def test(net, device, data_loader, criterion):
 
 def main():
     parser = argparse.ArgumentParser(description="Train CIFAR-10 with various models and optimizers")
-    parser.add_argument('--model', default='ResNet18', type=str, help='Model: ResNet18')
+    parser.add_argument('--model', default='ResNet18', type=str, help='Model: ResNet18, VGG13')
     parser.add_argument('--optimizer', default='SSR1M', type=str, help='optimizer: SGD, Adam, AdamW, SSR1M')
     parser.add_argument('--epochs', default=200, type=int, help='epochs')
 
