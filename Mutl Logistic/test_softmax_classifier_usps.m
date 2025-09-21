@@ -2,7 +2,7 @@ function test_softmax_classifier_usps()
     clc;
     close all;
     algorithms = {'SSR1M'};
-    z = [899475];
+    z = [123456];
     for i = 1:length(z)
         rng(z(i))
         epoch_base = 1;
@@ -22,8 +22,9 @@ function test_softmax_classifier_usps()
         y_test = yt_in(1:nt_train)';
         K = 10;
         epoch_ssr1 = epoch_base * 10;
-        batch_size = 512;
-        lambda = 0.01;
+        batch_size = 8;
+        it = 25;
+        lambda = 1e-4;
         problem = custom_softmax_regression(x_train, y_train, x_test, y_test, K, lambda);
         f_opt = 0;
         variance = 0.02;
@@ -42,6 +43,7 @@ function test_softmax_classifier_usps()
             options.verbose = true;
             options.lambda = lambda;
             options.permute_on = 1;
+            options.it = it;
             options.f_opt = f_opt;
             switch algorithms{alg_idx}
                 case {'SSR1M'}
@@ -49,21 +51,17 @@ function test_softmax_classifier_usps()
                     options.batch_size = batch_size;
                     options.sub_mode = 'SSR1M';
                     options.beta1 = 0.9;
-                    options.theta = 0.001;
+                    options.theta = 0.9999;
                     options.epsilon = 1e-8;
                     options.step_init = lr_ssr1;
                     options.step_alg = 'fix';
-                    algorithm_func = @SSR1M;
-                    algorithm_name = 'SSR1M';           
+                    algorithm_func = @SSR1M;            
                 otherwise
                     warn_str = [algorithms{alg_idx}, ' is not supported.'];
                     warning(warn_str);
-                    w_list{alg_idx} = '';
-                    info_list{alg_idx} = '';
-                    accuracy_list = '';
                     return;
             end
-            [w_list{alg_idx}, info_list{alg_idx}, train_acc, test_acc] = algorithm_func(problem, options, z(i));
+            [w_list{alg_idx}, info_list{alg_idx}] = algorithm_func(problem, options, z(i));
         end
     end
     fprintf('\n\n');
